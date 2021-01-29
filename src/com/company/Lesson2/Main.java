@@ -56,11 +56,12 @@ public class Main {
             }
         }
 
+        //TESTS
         int[] arrayTest = {4,0,3,2};
-//        boolean result = checkBalance(arrayTest);
-//        System.out.println(result);
+        //boolean result = checkBalance(arrayTest);
+        //System.out.println(result);
 
-        int[] result = shift(arrayTest, 1);
+        int[] result = shift(arrayTest, 2);
         for (int i : result){
             System.out.println(i);
         }
@@ -90,14 +91,14 @@ public class Main {
 
     //задание 7
     public static int[] shift(int[] array, int n) {
-        //int[] newArray = new int[array.length];
+        int[] newArray = new int[array.length];
         for (int i = 0; i < array.length; i++) {
             if (i-n >= 0){
-                array[i] = array[i-n];
+                newArray[i] = array[i-n];
             } else {
-                array[i] = array[array.length-n-i];
+                newArray[i] = array[array.length-n-i];
             }
         }
-        return array;
+        return newArray;
     }
 }
